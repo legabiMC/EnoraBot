@@ -3,21 +3,30 @@ const { MESSAGES } = require("../../util/constants");
 const ms = require('ms');
 
 module.exports.run = async(client, message, args) => {
+
     if (!message.member.roles.cache.some((r) => r.name === "Giveaways")) {
         return message.channel.send(':x: You need to have the manage messages permissions to start giveaways.');
     }
 
     let channel = message.mentions.channels.first();
-    if (!channel) return message.channel.send('Merci de préciser un salon !');
+    if (!channel) {
+        return message.channel.send('Merci de préciser un salon !');
+    }
 
     let giveawayDuration = args[1];
-    if (!giveawayDuration || isNaN(ms(giveawayDuration))) return message.channel.send('Merci de préciser une durée valide pour le giveaway !')
+    if (!giveawayDuration || isNaN(ms(giveawayDuration))) {
+        return message.channel.send('Merci de préciser une durée valide pour le giveaway !')
+    }
 
     let giveawayWinners = args[2];
-    if (isNaN(giveawayWinners) || (parseInt(giveawayWinners) <= 0)) return message.channel.send('Merci de préciser un nombre valide de gagnant(s) !');
+    if (isNaN(giveawayWinners) || (parseInt(giveawayWinners) <= 0)) {
+        return message.channel.send('Merci de préciser un nombre valide de gagnant(s) !');
+    }
 
     let giveawayPrize = args.slice(3).join(" ");
-    if (!giveawayPrize) return message.channel.send('Ok, je ne fais rien gagner. Radin !');
+    if (!giveawayPrize) {
+        return message.channel.send('Ok, je ne fais rien gagner. Radin !');
+    }
 
     client.giveawaysManager.start(channel, {
         time: ms(giveawayDuration),

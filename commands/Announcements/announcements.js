@@ -3,7 +3,10 @@ const { MessageEmbed, MessageAttachment } = require("discord.js");
 
 module.exports.run = async(client, message, args) => {
     let channel = args[0];
-    if (!channel) return message.channel.send("Veuillez rentrer l'ID d'un salon");
+    if (!channel) {
+        return message.channel.send("Veuillez rentrer l'ID d'un salon");
+    }
+
     let announcement = "Pas d'annonce fournie";
     if (args[1]) announcement = args.slice(1).join(" ");
     const embed = new MessageEmbed()

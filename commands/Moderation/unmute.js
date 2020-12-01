@@ -6,7 +6,9 @@ module.exports.run = (client, message, args) => {
     let member = message.mentions.members.first();
     let muteRole = message.guild.roles.cache.find(r => r.name === 'Muted');
 
-    if (!user.roles.cache.has(muteRole.id)) return message.reply("L'utilisateur mentionné n'est pas Mute !");
+    if (!user.roles.cache.has(muteRole.id)) {
+        return message.reply("L'utilisateur mentionné n'est pas Mute !");
+    }
 
     user.roles.remove(muteRole.id);
     message.channel.send(`<@${user.id}> a été unmute !`);

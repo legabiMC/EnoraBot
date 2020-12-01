@@ -4,7 +4,11 @@ const unbanImg = new MessageAttachment('./assets/img/unban.png');
 
 module.exports.run = async(client, message, args) => {
     let member = await client.users.fetch(args[0]);
-    if (!member) return message.reply("L'utilisateur n'existe pas ou n'est pas banni !");
+
+    if (!member) {
+        return message.reply("L'utilisateur n'existe pas ou n'est pas banni !");
+    }
+
     message.guild.members.unban(member);
 
     const embed = new MessageEmbed()

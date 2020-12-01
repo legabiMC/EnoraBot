@@ -2,7 +2,9 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = (client, message) => {
     const user = message.author;
-    if (user.bot) return;
+    if (user.bot) {
+        return;
+    }
 
     const embed = new MessageEmbed()
         .setAuthor(`${user.username} (${user.id})`)

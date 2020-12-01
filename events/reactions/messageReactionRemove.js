@@ -31,7 +31,9 @@ module.exports = async(client, messageReaction, user) => {
     const swedishRole = message.guild.roles.cache.get("768921788691775529");
     const turkishRole = message.guild.roles.cache.get("723590100709146715"); //changé
 
-    if (member.user.bot) return;
+    if (member.user.bot) {
+        return;
+    }
 
     if (["🇦🇪", "🇨🇳", "🇨🇿", "🇩🇰", "🇳🇱", "🇬🇧", "🇫🇮", "🇫🇷", "🇩🇪", "🇮🇳", "🇮🇹", "🇳🇴", "🇮🇷", "🇵🇱", "🇵🇹", "🇷🇴", "🇷🇺", "🇭🇷", "🇪🇸", "🇸🇪", "🇹🇷"].includes(emoji) && message.channel.id === channel.id) {
         switch (emoji) {
