@@ -1,11 +1,10 @@
 {
-    "name": "plumebotjs",
+    "name": "enorajs",
     "version": "0.1.0",
     "description": "",
     "main": "main.js",
     "scripts": {
-        "lavalink": "java -jar Lavalink.jar",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "node main.js"
     },
     "author": "",
     "license": "MIT",
@@ -13,7 +12,6 @@
         "discord-giveaways": "^4.2.1",
         "discord.js": "^12.5.1",
         "erela.js": "^2.2.0",
-        "erela.js-rewrite": "^1.8.8",
         "luxon": "^1.25.0",
         "moment": "^2.29.1",
         "mongoose": "^5.11.1",
