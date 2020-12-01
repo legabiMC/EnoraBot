@@ -204,7 +204,7 @@ const MESSAGES = {
             //   aliases: ['eval'],
             //   category: 'admin',
             //   description: 'Renvoie un code JavaScript testé',
-            //   usage: '<code_à_tester>',
+            //   usage: '<codeNeedTest>',
             //   isUserAdmin: false,
             //   permissions: true,
             //   args: true
@@ -213,8 +213,8 @@ const MESSAGES = {
             //   name: 'config',
             //   aliases: ['config'],
             //   category: 'admin',
-            //   description: 'Modifier la abse de données',
-            //   usage: '<clé_à_modifier> <valeur>',
+            //   description: 'Modifier la base de données',
+            //   usage: '<key> <value>',
             //   isUserAdmin: false,
             //   permissions: true,
             //   args: true
@@ -268,7 +268,7 @@ const MESSAGES = {
         //     aliases: ['addexperience', 'addexp'],
         //     category: 'experience',
         //     description: 'Donne de l\'xp à un utilisateur !',
-        //     usage: '<@user> <xp_à_ajouter>',
+        //     usage: '<@user> <XPToAdd>',
         //     isUserAdmin: false,
         //     permissions: true,
         //     args: true
