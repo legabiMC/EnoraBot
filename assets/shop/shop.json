@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Premier objet",
+    "objet": "Voici votre premier objet !",
+    "prix": 100
+  },
+  {
+    "name": "Deuxième objet",
+    "objet": "Voici votre deuxième objet !",
+    "prix": 150
+  }
+]
