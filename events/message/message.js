@@ -1,5 +1,5 @@
 const { Collection } = require('discord.js');
-const { PREFIX } = require('../../config');
+const { asPrefix } = require('../../config');
 
 module.exports = async(client, message) => {
     const settings = await client.getGuild(message.guild);
@@ -26,11 +26,11 @@ module.exports = async(client, message) => {
     }
 
 
-    if (!message.content.startsWith(PREFIX)) {
+    if (!message.content.startsWith(asPrefix)) {
         return;
     }
 
-    const args = message.content.slice(PREFIX.length).trim().split(/ +/);
+    const args = message.content.slice(asPrefix.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
     const user = message.mentions.users.first();
 
@@ -46,7 +46,7 @@ module.exports = async(client, message) => {
     if (command.help.args && !args.length) {
         let noArgsReply = `Wrong command use, ${message.author} !`;
 
-        if (command.help.usage) noArgsReply += `\nUse : \`${PREFIX}${command.help.name} ${command.help.usage}\``;
+        if (command.help.usage) noArgsReply += `\nUse : \`${asPrefix}${command.help.name} ${command.help.usage}\``;
 
         return message.channel.send(noArgsReply);
     };

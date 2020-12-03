@@ -1,7 +1,7 @@
 const { MESSAGES } = require("../../util/constants");
 const { MessageEmbed, MessageAttachment } = require("discord.js");
 const { readdirSync, read } = require("fs");
-const { PREFIX } = require('../../config');
+const { asPrefix } = require('../../config');
 const categoryList = readdirSync('./commands');
 
 module.exports.run = (client, message, args, settings, member) => {
@@ -10,7 +10,7 @@ module.exports.run = (client, message, args, settings, member) => {
             .setAuthor(`${message.author.username}, voici la page d'aide d'EnoraBOT`, message.author.avatarURL())
             .setColor("#36393F")
             .setThumbnail("https://cdn.discordapp.com/avatars/699210020079927326/9672e7a61fdb2e1ef9d99fee7da2fd39.png")
-            .addField("Liste des commandes", `Une liste de toutes les sous-catégories disponibles et leurs commandes.\nPour plus d'information sur une commande, tapez \`${PREFIX}help <command>\``)
+            .addField("Liste des commandes", `Une liste de toutes les sous-catégories disponibles et leurs commandes.\nPour plus d'information sur une commande, tapez \`${asPrefix}help <command>\``)
 
         for (const category of categoryList) {
             embed.addField(
@@ -29,7 +29,7 @@ module.exports.run = (client, message, args, settings, member) => {
             .setTimestamp()
             .setFooter(message.author.username, message.author.avatarURL())
             .addField("Description", `${command.help.description}`)
-            .addField("Utilisation", command.help.usage ? `${PREFIX}${command.help.name} ${command.help.usage}` : `${PREFIX}${command.help.name}`, true)
+            .addField("Utilisation", command.help.usage ? `${asPrefix}${command.help.name} ${command.help.usage}` : `${asPrefix}${command.help.name}`, true)
 
         if (command.help.aliases.length > 1) embed.addField("Aliases", `${command.help.aliases.join(', ')}`, true)
         return message.channel.send(embed);

@@ -252,48 +252,48 @@ const MESSAGES = {
                 args: false
             },
         },
-        // EXPERIENCE: {
-        //   USEREXPERIENCE: {
-        //     name: 'userexperience',
-        //     aliases: ['userexperience', 'uexp', 'level'],
-        //     category: 'experience',
-        //     description: 'Affiche ton nombre de points d\'XP !',
-        //     usage: '',
-        //     isUserAdmin: false,
-        //     permissions: false,
-        //     args: false
-        //   },
-        //   ADDEXPERIENCE: {
-        //     name: 'addexperience',
-        //     aliases: ['addexperience', 'addexp'],
-        //     category: 'experience',
-        //     description: 'Donne de l\'xp à un utilisateur !',
-        //     usage: '<@user> <XPToAdd>',
-        //     isUserAdmin: false,
-        //     permissions: true,
-        //     args: true
-        //   },
-        //   REMOVEEXPERIENCE: {
-        //     name: 'removeexperience',
-        //     aliases: ['removeexperience', 'removeexp'],
-        //     category: 'experience',
-        //     description: 'Retire de l\'xp à un utilisateur !',
-        //     usage: '<@user> <xp_à_enlever>',
-        //     isUserAdmin: false,
-        //     permissions: true,
-        //     args: true
-        //   },
-        //   LEADERBOARD: {
-        //     name: 'leaderboard',
-        //     aliases: ['leaderboard', 'top'],
-        //     category: 'experience',
-        //     description: 'Affiche le Top 10 des utilisateur ayant le + d\'XP sur le serveur !',
-        //     usage: '',
-        //     isUserAdmin: false,
-        //     permissions: true,
-        //     args: false
-        //   },
-        // },
+        EXPERIENCE: {
+            USEREXPERIENCE: {
+                name: 'userexperience',
+                aliases: ['userexperience', 'uexp', 'level'],
+                category: 'experience',
+                description: 'Affiche ton nombre de points d\'XP !',
+                usage: '',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+            ADDEXPERIENCE: {
+                name: 'addexperience',
+                aliases: ['addexperience', 'addexp'],
+                category: 'experience',
+                description: 'Donne de l\'xp à un utilisateur !',
+                usage: '<@user> <XPToAdd>',
+                isUserAdmin: false,
+                permissions: true,
+                args: true
+            },
+            REMOVEEXPERIENCE: {
+                name: 'removeexperience',
+                aliases: ['removeexperience', 'removeexp'],
+                category: 'experience',
+                description: 'Retire de l\'xp à un utilisateur !',
+                usage: '<@user> <xp_à_enlever>',
+                isUserAdmin: false,
+                permissions: true,
+                args: true
+            },
+            LEADERBOARD: {
+                name: 'leaderboard',
+                aliases: ['leaderboard', 'top'],
+                category: 'experience',
+                description: 'Affiche le Top 10 des utilisateur ayant le + d\'XP sur le serveur !',
+                usage: '',
+                isUserAdmin: false,
+                permissions: true,
+                args: false
+            },
+        },
         FUN: {
             EIGHTBALL: {
                 name: '8ball',

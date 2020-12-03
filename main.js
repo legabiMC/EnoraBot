@@ -1,6 +1,6 @@
 const { Client, Collection } = require('discord.js');
 const { loadCommands, loadEvents } = require("./util/loader");
-const { TOKEN } = require('./config');
+const { token } = require('./config');
 
 const client = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 require("./database/functions")(client);
@@ -23,4 +23,4 @@ loadCommands(client);
 loadEvents(client);
 client.mongoose.init();
 
-client.login(client.config.TOKEN);
+client.login(client.config.token);
