@@ -199,26 +199,26 @@ const MESSAGES = {
             }
         },
         ADMIN: {
-            // EVAL: {
-            //   name: 'eval',
-            //   aliases: ['eval'],
-            //   category: 'admin',
-            //   description: 'Renvoie un code JavaScript testé',
-            //   usage: '<codeNeedTest>',
-            //   isUserAdmin: false,
-            //   permissions: true,
-            //   args: true
-            // },
-            // CONFIG: {
-            //   name: 'config',
-            //   aliases: ['config'],
-            //   category: 'admin',
-            //   description: 'Modifier la base de données',
-            //   usage: '<key> <value>',
-            //   isUserAdmin: false,
-            //   permissions: true,
-            //   args: true
-            // },
+            EVAL: {
+              name: 'eval',
+              aliases: ['eval'],
+              category: 'admin',
+              description: 'Renvoie un code JavaScript testé',
+              usage: '<codeNeedTest>',
+              isUserAdmin: false,
+              permissions: true,
+              args: true
+            },
+            CONFIG: {
+              name: 'config',
+              aliases: ['config'],
+              category: 'admin',
+              description: 'Modifier la base de données',
+              usage: '<key> <value>',
+              isUserAdmin: false,
+              permissions: true,
+              args: true
+            },
             RELOAD: {
                 name: 'reload',
                 aliases: ['reload'],
@@ -470,68 +470,68 @@ const MESSAGES = {
                 args: false
             },
         },
-        // ECONOMY: {
-        //   DAILY: {
-        //     name: 'daily',
-        //     aliases: ['daily', 'day'],
-        //     category: 'economy',
-        //     description: 'Récupère ta paye journalière !',
-        //     usage: '',
-        //     isUserAdmin: false,
-        //     permissions: false,
-        //     args: false
-        //   },
-        //   ADDBALANCE: {
-        //     name: 'addbalance',
-        //     aliases: ['addbalance', 'addbal', 'addEC'],
-        //     category: 'economy',
-        //     description: 'Ajoute de l\'argent à un utilisateur',
-        //     usage: '<@user> <montant>',
-        //     isUserAdmin: false,
-        //     permissions: true,
-        //     args: true
-        //   },
-        //   REMOVEBALANCE: {
-        //     name: 'removebalance',
-        //     aliases: ['removebalance', 'rbal', 'rEC'],
-        //     category: 'economy',
-        //     description: 'Enlève de l\'argent à un utilisateur',
-        //     usage: '<@user> <montant>',
-        //     isUserAdmin: false,
-        //     permissions: true,
-        //     args: true
-        //   },
-        //   SHOP: {
-        //     name: 'shop',
-        //     aliases: ['shop'],
-        //     category: 'economy',
-        //     description: 'Affiche le magasin du jour !',
-        //     usage: '[objet]',
-        //     isUserAdmin: false,
-        //     permissions: false,
-        //     args: false
-        //   },
-        //   USERBALANCE: {
-        //     name: 'userbalance',
-        //     aliases: ['userbalance', 'userbal', 'ubal'],
-        //     category: 'economy',
-        //     description: 'Affiche votre porte-monnaie ou celui d\'un utilisateur !',
-        //     usage: '[@user]',
-        //     isUserAdmin: false,
-        //     permissions: false,
-        //     args: false
-        //   },
-        //   PAY: {
-        //     name: 'pay',
-        //     aliases: ['pay'],
-        //     category: 'economy',
-        //     description: 'Envoie de l\'argent à l\'utilisateur mentionné.',
-        //     usage: '<@user> <montant>',
-        //     isUserAdmin: false,
-        //     permissions: false,
-        //     args: true
-        //   },
-        // },
+        ECONOMY: {
+          DAILY: {
+            name: 'daily',
+            aliases: ['daily', 'day'],
+            category: 'economy',
+            description: 'Récupère ta paye journalière !',
+            usage: '',
+            isUserAdmin: false,
+            permissions: false,
+            args: false
+          },
+          ADDBALANCE: {
+            name: 'addbalance',
+            aliases: ['addbalance', 'addbal', 'addEC'],
+            category: 'economy',
+            description: 'Ajoute de l\'argent à un utilisateur',
+            usage: '<@user> <montant>',
+            isUserAdmin: false,
+            permissions: true,
+            args: true
+          },
+          REMOVEBALANCE: {
+            name: 'removebalance',
+            aliases: ['removebalance', 'rbal', 'rEC'],
+            category: 'economy',
+            description: 'Enlève de l\'argent à un utilisateur',
+            usage: '<@user> <montant>',
+            isUserAdmin: false,
+            permissions: true,
+            args: true
+          },
+          SHOP: {
+            name: 'shop',
+            aliases: ['shop'],
+            category: 'economy',
+            description: 'Affiche le magasin du jour !',
+            usage: '[objet]',
+            isUserAdmin: false,
+            permissions: false,
+            args: false
+          },
+          USERBALANCE: {
+            name: 'userbalance',
+            aliases: ['userbalance', 'userbal', 'ubal'],
+            category: 'economy',
+            description: 'Affiche votre porte-monnaie ou celui d\'un utilisateur !',
+            usage: '[@user]',
+            isUserAdmin: false,
+            permissions: false,
+            args: false
+          },
+          PAY: {
+            name: 'pay',
+            aliases: ['pay'],
+            category: 'economy',
+            description: 'Envoie de l\'argent à l\'utilisateur mentionné.',
+            usage: '<@user> <montant>',
+            isUserAdmin: false,
+            permissions: false,
+            args: true
+          },
+        },
     }
 }
 
