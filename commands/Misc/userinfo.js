@@ -3,17 +3,17 @@ const { MESSAGES } = require("../../util/constants");
 const moment = require("moment");
 
 module.exports.run = (client, message, args) => {
-  //member = Guildmember | user = User
-  let member = message.member;
-  if (args[0]) member = message.guild.member(message.mentions.users.first());
-  let user = member.user;
+        //member = Guildmember | user = User
+        let member = message.member;
+        if (args[0]) member = message.guild.member(message.mentions.users.first());
+        let user = member.user;
 
-  const embed = new MessageEmbed()
-    .setColor("#CCE0B4")
-    .setAuthor(`Carte d'identité de ${user.username}`)
-    .setThumbnail(user.displayAvatarURL())
-    .addField(`Infos :`,
-    `👤 ▪ **Nom :** ${user.tag}
+        const embed = new MessageEmbed()
+            .setColor("#CCE0B4")
+            .setAuthor(`Carte d'identité de ${user.username}`)
+            .setThumbnail(user.displayAvatarURL())
+            .addField(`Infos :`,
+                `👤 ▪ **Nom :** ${user.tag}
     👥 ▪ **Surnom :** ${member.nickname === null ? '**Aucun**' : `${member.nickname}`}
     
     🤖 ▪ **Bot:** ${user.bot ? 'Oui' : 'Non'}
