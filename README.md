@@ -16,5 +16,3 @@ module.exports = {
     }
 }
 ```
-
-Please note: config.js
