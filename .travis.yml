@@ -1,0 +1,5 @@
+language: node_js
+os: osx
+rvm:
+ - 2.2
+ - node_js
