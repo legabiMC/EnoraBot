@@ -2,8 +2,8 @@ const { Collection } = require('discord.js');
 const { PREFIX } = require('../../config');
 
 module.exports = async(client, message) => {
-    // const settings  = await client.getGuild(message.guild);
-    // const dbUser = await client.getUser(message.member);
+    const settings = await client.getGuild(message.guild);
+    const dbUser = await client.getUser(message.member);
 
     if (message.channel.type === "dm") {
         return client.emit("directMessage", message);
@@ -12,16 +12,18 @@ module.exports = async(client, message) => {
     if (message.author.bot) {
         return;
     }
-    // if (!dbUser) await client.createUser({
-    //   guildID: message.member.guild.id,
-    //   guildName: message.member.guild.name,
-    //   userID: message.member.id,
-    //   username: message.member.user.tag,
-    // });
-    // const expCd = Math.floor(Math.random() * 19) + 1;
-    // const expToAdd = Math.floor(Math.random() * 25) + 10;
+    if (!dbUser) await client.createUser({
+        guildID: message.member.guild.id,
+        guildName: message.member.guild.name,
+        userID: message.member.id,
+        username: message.member.user.tag,
+    });
+    const expCd = Math.floor(Math.random() * 19) + 1;
+    const expToAdd = Math.floor(Math.random() * 25) + 10;
 
-    // if (expCd >= 8 && expCd <= 11) await client.updateExp(client, message.member, expToAdd);
+    if (expCd >= 8 && expCd <= 11) {
+        await client.updateExp(client, message.member, expToAdd);
+    }
 
 
     if (!message.content.startsWith(PREFIX)) {
@@ -59,7 +61,5 @@ module.exports = async(client, message) => {
         }
     };
 
-    command.run(client, message, args
-        //, settings, dbUser
-    );
+    command.run(client, message, args, settings, dbUser);
 };

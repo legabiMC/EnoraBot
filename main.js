@@ -3,9 +3,9 @@ const { loadCommands, loadEvents } = require("./util/loader");
 const { TOKEN } = require('./config');
 
 const client = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
-require("./util/functions")(client);
+require("./database/functions")(client);
 client.config = require("./config");
-// client.mongoose = require("./util/mongoose");
+client.mongoose = require("./database/mongoose");
 ["commands", "musicPlayer"].forEach(x => client[x] = new Collection());
 
 const { GiveawaysManager } = require('discord-giveaways');
@@ -21,6 +21,6 @@ client.giveawaysManager = new GiveawaysManager(client, {
 
 loadCommands(client);
 loadEvents(client);
-// client.mongoose.init();
+client.mongoose.init();
 
 client.login(client.config.TOKEN);

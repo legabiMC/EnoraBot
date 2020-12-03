@@ -4,7 +4,9 @@ const ms = require('ms');
 
 module.exports.run = async(client, message, args) => {
     let channel = message.mentions.channels.first();
-    if (!channel) return message.channel.send('Merci de préciser un salon !');
+    if (!channel) {
+        return message.channel.send('Merci de préciser un salon !');
+    }
 
     let giveawayDuration = args[1];
     if (!giveawayDuration || isNaN(ms(giveawayDuration))) {
