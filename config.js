@@ -1,13 +1,10 @@
 module.exports = {
-    TOKEN: "TOKEN_HERE",
+    TOKEN: "Nzg0MDkxNzc1MzQ5NDI0MTM5.X8kQXg.uZwNS2W2Rbb3-V4o6moszAZ2Oso",
     PREFIX: "+",
-    // LAVALINK_HOST: "localhost",
-    // LAVALINK_PORT: 8000,
-    // LAVALINK_PASSWORD: "PASS",
-    // DBCONNECTION: "CONNECT",
-    // DEFAULTSETTINGS: {
-    //   prefix: "+",
-    //   logChannel: "logs🔎",
-    //   welcomeMessage: "Bienvenue {{user}} !"
-    // }
+    DBCONNECTION: "mongodb://localhost:27017/enora",
+    DEFAULTSETTINGS: {
+        prefix: "+",
+        logChannel: "logs🔎",
+        welcomeMessage: "Bienvenue {{user}} !"
+    }
 }
