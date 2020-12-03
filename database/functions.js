@@ -34,7 +34,7 @@ module.exports = async(client) => {
     };
 
     client.getUser = async user => {
-        const data = await User.findOne({ userID: user.id });
+        const data = await User.findOneAndUpdate({ userID: user.id });
         if (data) {
             return data;
         } else {
