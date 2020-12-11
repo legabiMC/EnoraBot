@@ -13,7 +13,7 @@ module.exports = async(client) => {
         if (data) {
             return data;
         }
-        return client.config.DEFAULTSETTINGS;
+        return client.config.defaultSettings;
     };
 
     client.updateGuild = async(guild, settings) => {
